@@ -1,0 +1,47 @@
+Notas sobre vi/vim
+Vi es el editor más tradicional de los Unix en general. Debian instala por defecto el mejorado por la comunidad del Free Software, se llama vim o Vi Improoved. La versión "tiny" es prácticamente igual a la tradicional y es la que viene instalada por defecto. La versión completa de vim tiene algunas mejoras que aceleran la curva de aprendizaje: Fundamentalmente que nos dice en que estado estamos abajo de la pantalla y algunos comandos adicionales. Todos los comandos del vi tradicional funcionan en el vim. 
+
+Instalación de la versión completa:
+Si bien en debian se instala por defecto la versión «tiny» es muy sencillo pasar a la versión completa:
+
+apt update && apt install vim
+
+Modos de Vi
+Hay dos modos en que puedo estar en el vi (Y un tercero que lo vemos más abajo):
+
+Modo comando:
+
+me permite pasarle comandos al vi (copiar, pegar, borrar línea,  entrar en modo entrada, etc.) Es el modo en el que inicia. Para volver al modo comando siempre se puede presionar varias veces [Esc]
+
+Modo entrada: 
+
+escribo letras y números, es decir el contenido del archivo . Para ingresar al modo comando se puede presionar i
+
+Nota sobre frustración: Una de las frustraciones más comunes usando la versión «tinny» o tradicional de vi es que cuando presionamos las flechas estando en modo entrada no se mueve sino que escribe algunas letras. En el vi tradicional en el modo entrada no se pueden usar las flechas ni moverse de la línea actual. Para moverse se requiere volver  a modo comando ([Esc]) en donde las flechas vuelven a funcionar normalmente. Esto no sucede con la versión vim completa.
+
+Dentro del «modo comando» tenemos dos tipos de comandos: 
+A) Comandos que son accesos directos (i, dd, yy, p)
+v modo visual 
+u undoNetworkmediatank!2009
+
+
+B) Comandos que se escriben en la línea de comandos. (Para ingresar
+estos comandos, en modo comando debo tipear ":")
+
+Comandos de línea de comandos usuales:
+
+:w guarda el archivo
+:w nuevonombre
+:q Sale
+:wq graba y sale
+:q! sale sin grabar
+
+! <cualquier comando unix>
+
+
+Modo adicional: Modo visual
+Modo resaltado normal: se ingresa desde el modo comando presionando v
+
+Modo resaltado en bloque: se ingresa desde el modo comando presionando [ctrl]q
+
+Con el área resaltada se pueden hacer varias operaciones. Las más comunes son cortar o copiar (d o y). Además se pueden hacer cambios más sofisticados que solo afecten al área resaltada. 
